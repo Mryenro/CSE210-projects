@@ -1,0 +1,10 @@
+ Version control system or VCS is the system to verify the work of the team working on a project.
+
+ the benefits are numerous, some of the benefits are: -felxibility with team members working on the project in terms of time zones.
+-easy to verify what was changed, who changed it, why and when
+-easy to verify all the changes that has been made in the project, also the progress which keeps every member updated
+
+ example : a team member fixed a bug in the program and he synced the new debugged version with the githun repo, he added a commit message before syncing explaining what was done, the team members will be able to see the change and also the comment and when it was done, and the person who made the modifications as well, in case the team members want to recover an old version, they will be able to recover it anytime.
+
+ a command that might be used is git commit -m "fixed the text bug", this command useful to commit and add the message describing the modifications, (please not git requires a comment before syncing), in our example the git commit -m"" here is to explain to the other team members that the modification is to fix the text bug that exists on the project.
+
