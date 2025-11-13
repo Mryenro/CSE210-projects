@@ -1,0 +1,33 @@
+Encapsulation is the act of Making the code in a class as a capsule, which makes it hidden from other code, what happens in the capsule 
+is only in the capsule, which means if something wrong happens inside it, the other code is not to blame.
+
+when a class is encapsulated, this class only contains the data and the logic around this data, it's furthermore a good use of the classes.
+with this logic, the other parts of the code when they need to perform any kind of task that this encapsulated class contains, they cannot
+access directly the data but use the class and communicate with it so they can use the data appropriately without directly accessing it.
+
+I will paste some of the code used in the class fraction as an example: 
+
+here we set the data as private, which means it's encapsulated in the class Fraction.
+public class Fraction
+{
+    private int _top;
+    private int _bottom;
+    ....
+}
+
+here we set fraction() method that we can use in our program to get the data.
+public Fraction(int top, int bottom)
+    {
+        _top = top;
+        _bottom = bottom;
+
+    }
+
+we can use it in the main program like this: 
+Fraction f3 = new Fraction(6, 7);      // 6/7
+Console.WriteLine($"fraction 3 is: {f3} (top = {f3.GetTop()}, bottom = {f3.GetBottom()})");
+
+it will return a text like this: fraction 3 is: Fraction (top = 6, bottom = 7)
+
+of course this is a simple explanation, and our team activity makes it more detailed and interesting.
+
