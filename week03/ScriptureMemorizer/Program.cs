@@ -20,7 +20,7 @@ class Program
 
         string scriptureText = "And if men come unto me I will show unto them their weakness. I give unto men weakness that they may be humble and my grace is sufficient for all men that humble themselves before me; for if they humble themselves before me, and have faith in me, then will I make weak things become strong unto them. Behold, I will show unto you that man's weakness is acceptable unto me if he will repent and come unto me with a full purpose of heart; for I will make weak things become strong unto you. Wherefore, I would not that ye should come unto me save ye humble yourselves.";
 
-        Console.WriteLine($"how many verses from {reference} you want to try to memorize? type 1 for 1 verse, type 2 for all verses: "); //exceeding requirement by trying to get size of scripture according to user choice
+        Console.WriteLine($"How many verses from {reference.GetDisplayText()} you want to try to memorize? type 1 for 1 verse, type 2 for all verses: "); //exceeding requirement by trying to get size of scripture according to user choice
         int scriptureLength = int.Parse(Console.ReadLine());
 
         string verse1 = "And if men come unto me I will show unto them their weakness. I give unto men weakness that they may be humble; and my grace is sufficient for all men that humble themselves before me; for if they humble themselves before me, and have faith in me, then will I make weak things become strong unto them; ";
