@@ -41,7 +41,7 @@ class Program
 
 
 
-        //check if it's completely hidden.
+        //check if it's completely hidden..
         string userInput = "";
         bool IsCompletelyHidden = scripture.IsCompletelyHidden();
         while (userInput.ToLower() != "quit" && !scripture.IsCompletelyHidden()) // the program will continue while the user didnt type quit or all the workds are completely hidden (even if he writes anything else it's fine as long as it's not quit)
