@@ -1,0 +1,35 @@
+Inheritance in C# language is the possibility of a class to inherit or to take directly attributes and methods from another main class, without having to rewrite
+everything, it directly takes the original class and uses the attributes and methods already there.
+Inheritance helps the coder to save many hours of coding in big codes, and make it easier for him to create the new derived classes that contains only the new 
+more specific new attributes, which means reusing the same code. For example we have 2 classes, the original (parent) class and the derived class (child), the parent here as an example is vehicle class, all
+vehicles have all the attributes of every vehicle can have, then another class named TruckVehicle, and another one called SuvVehicle, both can take the attributes from  the 
+vehicle class and specify the one that are not shared with any other vehicle.
+
+
+from my code I had 3 classes, 2 of them are derived (child class) and on eis the parent, Assignment is the main class: 
+public class Assignment
+{
+    private string _studentName;
+    private string _topic;
+
+    public Assignment(string studentName, string topic)
+    {
+        _studentName = studentName;
+        _topic = topic;
+    }
+    ...
+
+in the child class MathAssignment I dont have to get the student name and topic because they are already in the assignment class, all I need to do it to 
+is to use a colon followed by the name of the parent class to inherit the attributes in the new class, and : base() if front of the MathAssinment() constructor in 
+order to call the parent and take the attributes that they are in the parent:
+
+public class MathAssignment : Assignment
+{
+    private string _textBookSection;
+    private string _problems;
+
+    public MathAssignment(string studentName, string topic, string textBookSection, string problems) : base(studentName, topic)
+    {
+        _textBookSection = textBookSection;
+        _problems = problems;
+    } ...
