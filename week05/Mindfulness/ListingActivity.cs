@@ -37,6 +37,7 @@ public class ListingActivity : Activity
             _count++;
         }
         Console.WriteLine($"you listed {_count} items ");
+        ShowSpinner(5);
 
         return userList;
 
@@ -60,7 +61,8 @@ public class ListingActivity : Activity
             {
                 Console.WriteLine(input);
             }
-            ShowSpinner(4);
+            ShowSpinner(10);
+            Console.Clear();
         }
     }
 
@@ -94,6 +96,8 @@ public class ListingActivity : Activity
         Console.WriteLine("You may begin in: ");
         ShowCountDown(5);
         List<string> userList = GetListFromUser();
+
+        Console.Clear();
         DisplayUserList(userList, randomPrompt);
         DisplayEndingMessage();
         ShowSpinner(5);
