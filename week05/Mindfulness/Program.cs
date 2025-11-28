@@ -7,7 +7,7 @@ class Program
         Console.WriteLine("Hello World! This is the Mindfulness Project.");
 
 
-
+        //exceeded requirement by adding DisplayUserList() method in the listing activity class
 
         List<string> listingPrompts = new List<string>();
         listingPrompts.Add("Who are people that you appreciate?");
