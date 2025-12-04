@@ -31,7 +31,7 @@ class Program
 
         foreach (Shape shape in shapes)
         {
-            Console.WriteLine($"this is the color: {shape.GetColor()}, and this is the area: {shape.GetArea()}");
+            Console.WriteLine($"this is the color: {shape.GetColor()}, and this is the area: {shape.GetArea():F2}");
         }
 
 

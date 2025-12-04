@@ -1,0 +1,55 @@
+Polymorphism in programming is the possibility to make a line of code have different behaviours depending on the context of this line of code.
+
+The benefit of Polymorphism is great. When we use it, if there are multiple classes that share the same method name and return type, even if those methods work differently, the main program can function more flexibly with those methods because they all override the method from the parent class.
+
+For example, we applied Polymorphism in the shapes program. All the shapes we had have a method that returns the area; however, each shape has a different calculation for area. The square is the side multiplied by itself (side × side), the rectangle is the length multiplied by the width, and the circle is (radius × radius × π).
+
+All those shapes return an area, but they are calculated differently. To use Polymorphism here we have to make the parent class abstract, so that we can make the area method abstract too. (We could have used a virtual function, but in this case there is no default implementation for GetArea, so abstract is more appropriate.) This means that we must override the GetArea() method in every child class.
+
+in ou case here: 
+
+public abstract class Shape 
+{
+    ...
+    public abstract double GetArea(); // by writing this code, we implement an empty virtual method to be override later on.
+}
+
+public class Circle : Shape //here is the class Circle as a child for the parent class Shape
+{
+    ...
+    public override double GetArea() //overriding it so that it returns the area depending on how we calculate the area of a circle
+    {
+        return Math.PI *_radius * _radius; 
+    }
+}
+
+
+public class Square : Shape //same for square, the child of shape class
+{
+    ...
+    public override double GetArea() //overriding again, but different way to calculate the square, and that is the Polymorphism, same method, same form, different ways to call it.
+    {
+        return _side * _side;
+    }
+}
+
+
+And finally, we can use them in the main program with no problem. Depending on the object type, the program will call the correct version of the method:
+
+
+foreach (Shape shape in shapes)
+{
+    Console.WriteLine($"this is the color: {shape.GetColor()}, and this is the area: {shape.GetArea():F2}");
+}
+
+This program will return this: 
+this is the color: red, and this is the area: 144
+this is the color: blue, and this is the area: 150
+this is the color: yellow, and this is the area: 153.93
+
+And in our example, our class is flexible thanks to Polymorphism.
+
+
+
+
+
